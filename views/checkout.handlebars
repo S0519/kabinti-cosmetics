@@ -1,0 +1,35 @@
+<section class="section">
+<div class="container">
+     <div class="payout-form-cont" id="payment-form">
+    <h3 class="sub-heading2 text-center mb-3">Checkout</h3>
+    <div class="form-group3 single">
+        <input name="email" placeholder="email" type="text" required/>
+    </div>
+    <div class="form-group3 single">
+        <input name="address" placeholder="address" type="text" required/>
+    </div>
+    <div class="form-group3 multiple">
+        <input name="city" placeholder="city" type="text" required/>
+        <input name="state" placeholder="state" type="text" required/>
+        <input name="zip" placeholder="zip" type="text" required/>
+    </div>
+    
+    <div id="card-element">
+          <!--Stripe.js injects the Card Element-->
+        </div>
+      <button id="submit" class="btn-pay">
+        <div class="spinner hidden" id="spinner"></div>
+        <span id="button-text">Pay ( {{session.cart.totalPrice}}$ )</span>
+      </button>
+      <p id="card-error" role="alert"></p>
+      <p class="result-message hidden">
+        Payment succeeded, see the result in your
+        <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+      </p>
+    </div>
+</div>
+</section>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+<script src="/js/stripe/stripe.js"></script>

@@ -1,0 +1,19 @@
+<tr>
+                        <td class="product-cell">
+                            <img src="{{item.imageUrl}}" alt="image">
+                            <h3>{{item.title}}</h3>
+                        </td>
+                        <td>{{item.price}}$</td>
+                        <td>
+                            <div class="btn-qty-grp">
+                                <button onclick="cartIncrement('{{item._id}}')"><i class="fas fa-plus"></i></button>
+                                <span id="qty-{{item._id}}">{{qty}}</span>
+                                <button onclick="cartDecrement('{{item._id}}')"><i class="fas fa-minus"></i></button>
+                            </div>
+                        </td>
+                        <td>{{price}}$</td>
+                        <td>
+                            <button onclick="deleteCartItem('{{item._id}}')" class="btn-remove-prod"><i class="far fa-times-circle"></i></button>
+                        </td>
+</tr>
+                    

@@ -1,0 +1,40 @@
+<section class="section">
+<div class="container">
+    <div class="cart-content">
+        <div class="row">
+        <div class="col-12 col-md-12 col-xl-12">
+                <table class="tbl-cart">
+                    <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#if products}}
+                    {{#each products as |product|}}
+                    {{>cart-list-item product}}
+                    {{/each}}
+                    {{else}}
+                    <tr>
+                        <td colspan="4"><h3 class="main-heading text-light">Shopping cart is empty</h3></td>
+                    </tr>
+                    {{/if}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {{#if products}}
+    <div class="cart-footer">
+    <p class="cart-info">Grand total:<span>{{session.cart.totalPrice}}$</span></p>
+    <p class="cart-info">Total items:<span>{{session.cart.totalQty}}</span></p>
+    <button class="btn-checkout">checkout!</button>
+    {{else}}
+    {{/if}}
+</div>
+</div>
+</section>

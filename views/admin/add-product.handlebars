@@ -1,0 +1,51 @@
+<section class="section">
+<div class="container">
+    <h1 class="main-heading">Add Product</h1>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+        <div class="formgroup2">
+        <label for="title">Title</label>
+        <input name="title" placeholder="product name" type="text">
+        </div>
+         <div class="formgroup2">
+        <label for="price">Price ($)</label>
+        <input name="price" placeholder="0" min="0" type="Number">
+        </div>
+         <div class="formgroup2">
+        <label for="discount">Discount (%)</label>
+        <input name="discount" placeholder="0" min="0" type="Number">
+        </div>
+        <div class="formgroup2">
+        <label for="quantity">Quantity</label>
+        <input name="quantity" placeholder="1" min="1" type="Number">
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+        <div class="formgroup2">
+        <label for="fullname">Category</label>
+        <select name="category">
+            <option value="Skin" selected>Skin</option>
+            <option value="Cosmetics">Cosmetics</option>
+            <option value="Hair">Hair</option>
+        </select>
+        </div>
+        <div class="formgroup2">
+        <label for="brief-desc">Breif Description</label>
+        <input name="brief-desc" placeholder="description" type="Text">
+        </div>
+        <div class="formgroup2">
+        <label for="imgUrl">Image Url</label>
+        <input name="imgUrl" placeholder="URL" type="Text">
+        </div>
+         <div class="formgroup2">
+        <label for="full-desc">Full Description</label>
+        <textarea name="full-desc" cols="30" rows="1"></textarea>
+        </div>
+        </div> 
+        
+        </div>    
+    <button class="btn-add">Add</button>
+    </div>
+</div>
+</section>
+<script src="/js/add-product.js"></script>

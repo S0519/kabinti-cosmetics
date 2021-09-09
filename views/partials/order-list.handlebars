@@ -1,0 +1,12 @@
+<div class="order-card">
+        <h3 class="sub-heading1">Customer: {{name}}</h4>
+        <h4 class="sub-heading">Items</h4>
+        <ul class="item-list">
+            {{#each cart.items as |orderItem|}}
+            <li>{{orderItem.item.title}}</li>
+            {{/each}}
+        </ul>
+        <h4 class="sub-heading">Shipping address: <span> {{address.address}},{{address.city}}, {{address.state}}, {{address.zip}}</span></h4>
+        
+        <span class="sub-heading">Grand total: {{cart.totalPrice}}$</span>
+    </div>

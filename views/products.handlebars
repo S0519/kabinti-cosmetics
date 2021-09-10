@@ -1,0 +1,34 @@
+<section class="product-cont">
+<div class="side-nav">
+    <button class="close-sidenav"><i class="far fa-times-circle"></i></button>
+    <h3>Choose category</h3>
+    <button onclick="getCategory('all')" class="btn-show-all">Show all</button>
+    {{#if categoryList}}
+    {{#each categoryList as |category|}}
+    <div class="filter-group">
+        <label onclick="getCategory('{{category._id}}')" class="filter-label" for="Skin">
+        <img src={{category.imageUrl}} alt="image"><span>{{category.name}}</span>
+        </label>
+        <input id="{{category._id}}" class="cb-filter" value="{{category.name}}" type="checkbox" name="Skin">
+    </div>
+    {{/each}}
+    {{else}}
+    {{/if}}
+    
+   
+</div>
+<div class="container">
+        <button class="btn-filter"><i class="fas fa-filter"></i>Filters</button>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+           {{#each products as |product|}}
+           {{> product-card product}}
+           {{/each}}
+        </div>
+    </div>
+</section>
+</section>
+<script src="/js/products.js"></script>
